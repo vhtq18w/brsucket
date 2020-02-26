@@ -1,0 +1,48 @@
+{
+    "homepage": "https://www.gnu.org/software/emacs/",
+    "license": "GPL-3.0-or-later",
+    "description": "An extensible, customizable, free/libre text editor.",
+    "version": "27.0.60-snapshot-emacs-27-2020-02-10",
+    "architecture": {
+        "64bit": {
+            "url": "https://alpha.gnu.org/gnu/emacs/pretest/windows/emacs-27/emacs-27.0.60-snapshot-emacs-27-2020-02-10-x86_64.zip",
+            "hash": "905314F51FA80F1E3DE50740780A414D68D42E45B87458AE385843B39A851A7B"
+        },
+        "32bit": {
+            "url": "https://alpha.gnu.org/gnu/emacs/pretest/windows/emacs-27/emacs-27.0.60-snapshot-emacs-27-2020-02-10-i686.zip",
+            "hash": "06C92A26D00030645F6465BB3B3A087FA390067FC2A5DCFBDFE9859DE0762A43"
+        }
+    },
+    "bin": [
+        "bin\\runemacs.exe",
+        "bin\\emacs.exe",
+        "bin\\emacsclientw.exe",
+        "bin\\etags.exe",
+        "bin\\ctags.exe"
+    ],
+    "checkver": {
+        "url": "https://alpha.gnu.org/gnu/emacs/pretest/windows/emacs-$majorVersion/",
+        "re": "emacs-([\\d\\w.-]+)-x86_64.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://alpha.gnu.org/gnu/emacs/pretest/windows/emacs-27/emacs-$version-x86_64.zip"
+            },
+            "32bit": {
+                "url": "https://alpha.gnu.org/gnu/emacs/pretest/windows/emacs-27/emacs-$version-i686.zip"
+            }
+        }
+    },
+    "shortcuts": [
+        [
+            "bin\\runemacs.exe",
+            "Emacs"
+        ],
+        [
+            "bin\\emacsclientw.exe",
+            "Emacs Client",
+            "-c -n -a \"\""
+        ]
+    ]
+}
